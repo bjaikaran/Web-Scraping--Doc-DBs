@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet"  type= "text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel= "stylesheet" type= "text/css" href= "/static/appstyle.css">
+</head>
+
+<body style="background-color: white">
+  <div clas="container">
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">
+        Scrape News Mars Data</a></p>
+    </div>
+
+    <!--  data -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>Latest Mars News.</h2>
+          <h4> {{mars_data["latest_news"]["title"] }}</h4>  
+          <p> {{mars_data["latest_news"]["paragraph"]}} </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>Featured Mars Image</h2>
+          <img src="{{ mars_data["featured_image"] }}" class="img-fluid" style="max-width: 100%;" alt="Responsive image" />
+        </div>
+        <div class="col-md-4">
+          <div class="row weather-box">
+            <h4> Current Weather on Mars</h4>
+              <p> {{mars_data.weather}} </p>
+          </div>
+          <div class="table-box">
+            <h4> Mars Facts</h4>
+              {{mars_data.facts|safe}}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="container">
+        <h2 align="center">Mars Hemispheres</h2>
+          <hr>
+          <div class="row"></div>
+            <div class="col-md-6" border>
+              <img class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Cerberus Hemisphere"] }}" alt="Cerberus Hemisphere" style="max-width: 45%;">
+              <h3>Cerberus Hemisphere</h3>
+            </div>
+            <div class="col-md-6" border>
+              <img  class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Schiaparelli Hemisphere"] }}"  alt="" style="max-width: 45%;">
+              <h3>Schiaparelli Hemispher</h3>
+            </div>
+            <div class="col-md-6" border>
+              <img  class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Syrtis Major Hemisphere"] }}" alt="Syrtis Major Hemisphere" style="max-width: 45%;">
+              <h3>Syrtis Major Hemisphere</h3>
+            </div>
+            <div class="col-md-6" border>
+              <img  class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Valles Marineris Hemisphere"] }}" alt="Valles Marineris Hemisphere" style="max-width: 45%;">
+              <h3>Valles Marineris Hemisphere</h3>
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js"integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

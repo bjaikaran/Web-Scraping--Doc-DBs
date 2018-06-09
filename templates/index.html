@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mission to Mars</title>
   <link rel="stylesheet"  type= "text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel= "stylesheet" type= "text/css" href= "/static/appstyle.css">
+  <link rel= "stylesheet" type= "text/css" href= "/assets/style.css">
 </head>
 
 <body style="background-color: white">
@@ -36,12 +36,12 @@
         </div>
         <div class="col-md-4">
           <div class="row weather-box">
-            <h4> Current Weather on Mars</h4>
-              <p> {{mars_data.weather}} </p>
+            <h4> <b> Current Weather on Mars </b></h4>
+              <p> {{ mars_data["weather"] }} </p>
           </div>
           <div class="table-box">
             <h4> Mars Facts</h4>
-              {{mars_data.facts|safe}}
+               {{ mars_data["facts"] | safe }}
           </div>
         </div>
       </div>

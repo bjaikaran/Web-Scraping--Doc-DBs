@@ -37,4 +37,4 @@ def scrape():
     return render_template("index.html", mars_data = mars_data)
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run()

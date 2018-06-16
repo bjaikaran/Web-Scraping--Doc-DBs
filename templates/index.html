@@ -7,13 +7,20 @@
     <title>Mission to Mars</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
+
+    <script type="text/javascript">
+        function Redirect() {
+            window.location = "";
+        }
+        setTimeout('Redirect()', 10000);
+    </script>
 </head>
 
 <body style="background-color: white">
     <div clas="container">
         <div class="jumbotron text-center">
             <h1>Mission to Mars</h1>
-            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">
+            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button" onclick="Redirect()">
         Scrape News Mars Data</a></p>
         </div>
 
@@ -32,7 +39,7 @@
             <div class="row">
                 <div class="col-md-8">
                     <h2>Featured Mars Image</h2>
-                    <img src="{{ mars_data[" featured_image "] }}" class="img-fluid" style="max-width: 100%;" alt="Responsive image" />
+                    <img src="{{ mars_data[" featured_image "] }}" class="img-fluid" style="max-width: 100%; border-radius: 50px 10px;">
                 </div>
                 <div class="col-md-4">
                     <div class="row weather-box">

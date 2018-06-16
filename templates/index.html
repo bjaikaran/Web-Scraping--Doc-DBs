@@ -5,15 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mission to Mars</title>
-  <link rel="stylesheet"  type= "text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel= "stylesheet" type= "text/css" href= "/assets/style.css">
+  <link rel="stylesheet" type= "text/css" href= "https://fonts.googleapis.com/css?family=Muli|Tajawal" >
+  <link rel="stylesheet" type= "text/css" href= "/assests/bootstrap.min.css">
+  <link rel="stylesheet" type= "text/css" href= "/assets/style.css">
+  <style>
+    .dataframe td {
+        text-align: left;
+        padding: 2px;
+      }
+    
+    .dataframe th {
+      text-align: left;
+      text-overflow: ellipsis;
+      width: auto;
+      font-weight: bold;
+      padding: 1px;
+      background-color: #ffffff;
+    }
+  
+  .dataframe tr:nth-child(even){
+      background-color: rgb(142, 204, 255);
+    }
+    
+  .dataframe table-hover tbody tr:hover td, .dataframe table-hover tbody tr:hover th {
+      background-color: #fffccc;
+      text-overflow: ellipsis;
+      box-shadow: 3px 3px 5px rgb(100, 97, 81);
+    }
+  </style>
 </head>
-
 <body style="background-color: white">
   <div clas="container">
     <div class="jumbotron text-center">
       <h1>Mission to Mars</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">
+      <p><a class="btn-primary btn-lg" href="/scrape" role="button">
         Scrape News Mars Data</a></p>
     </div>
 
@@ -30,54 +55,56 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-8">
+          <div class="col-md-2"></div>
+        <div class="col-md-5">
           <h2>Featured Mars Image</h2>
-          <img src="{{ mars_data["featured_image"] }}" class="img-fluid" style="max-width: 100%;" alt="Responsive image" />
+          <img src="{{ mars_data["featured_image"] }}" class="img-fluid" style="max-width: 75%; border-radius: 15px 50px;" alt="Responsive image" />
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="row weather-box">
             <h4> <b> Current Weather on Mars </b></h4>
               <p> {{ mars_data["weather"] }} </p>
           </div>
-          <div class="table-box">
+          <div>
             <h4> Mars Facts</h4>
-               {{ mars_data["facts"] | safe }}
+              {{ mars_data["facts"] | safe }}
           </div>
         </div>
+        <div class="col-md-2"></div>
       </div>
     </div>
 
-    <div class="container-fluid">
+   <center><div class="container-fluid">
       <div class="container">
         <h2 align="center">Mars Hemispheres</h2>
           <hr>
-          <div class="row"></div>
+          <div class="row">
             <div class="col-md-6" border>
-              <img class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Cerberus Hemisphere"] }}" alt="Cerberus Hemisphere" style="max-width: 45%;">
-              <h3>Cerberus Hemisphere</h3>
+                <a href="{{ mars_data["hemispheres"]["Cerberus Hemisphere"] }}" target="_blank"><img class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Cerberus Hemisphere"] }}" alt="Cerberus Hemisphere" style="max-width: 45%;">
+              <h3>Cerberus Hemisphere</h3></a>
             </div>
             <div class="col-md-6" border>
-              <img  class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Schiaparelli Hemisphere"] }}"  alt="" style="max-width: 45%;">
-              <h3>Schiaparelli Hemispher</h3>
+                <a href="{{ mars_data["hemispheres"]["Schiaparelli Hemisphere"] }}" target="_blank"><img  class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Schiaparelli Hemisphere"] }}"  alt="" style="max-width: 45%;">
+              <h3>Schiaparelli Hemisphere</h3></a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6" border>
+              <a href="{{ mars_data["hemispheres"]["Syrtis Major Hemisphere"] }}" target="_blank"><img  class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Syrtis Major Hemisphere"] }}" alt="Syrtis Major Hemisphere" style="max-width: 45%;">
+              <h3>Syrtis Major Hemisphere</h3></a>
             </div>
             <div class="col-md-6" border>
-              <img  class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Syrtis Major Hemisphere"] }}" alt="Syrtis Major Hemisphere" style="max-width: 45%;">
-              <h3>Syrtis Major Hemisphere</h3>
-            </div>
-            <div class="col-md-6" border>
-              <img  class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Valles Marineris Hemisphere"] }}" alt="Valles Marineris Hemisphere" style="max-width: 45%;">
-              <h3>Valles Marineris Hemisphere</h3>
+                <a href="{{ mars_data["hemispheres"]["Valles Marineris Hemisphere"] }}" target="_blank"><img  class = "img img-responsive" id="mars_data-viz" src="{{ mars_data["hemispheres"]["Valles Marineris Hemisphere"] }}" alt="Valles Marineris Hemisphere" style="max-width: 45%;">
+              <h3>Valles Marineris Hemisphere</h3></a>
             </div>
           </div>
       </div>
-    </div>
+    </div></center>
 
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.js"integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
-
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="/assets/bootstrap.min.js"></script>
 
 </body>
 </html>

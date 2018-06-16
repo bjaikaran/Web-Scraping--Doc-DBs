@@ -7,24 +7,17 @@
     <title>Mission to Mars</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/style.css">
-
-    <script type="text/javascript">
-        function Redirect() {
-            window.location = "";
-        }
-        setTimeout('Redirect()', 10000);
-    </script>
 </head>
 
 <body style="background-color: white">
     <div clas="container">
         <div class="jumbotron text-center">
             <h1>Mission to Mars</h1>
-            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button" onclick="Redirect()">
-        Scrape News Mars Data</a></p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape News Mars Data</a>
+            </p>
         </div>
 
-        <!--  data -->
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
@@ -57,41 +50,41 @@
         <div class="container-fluid">
             <div class="container">
                 <h2 align="center">Mars Hemispheres</h2>
-                <hr>
+                <hr />
                 <div class="row">
                     <div class="col-md-6">
-                        <a href="{{ mars_data[" hemispheres "]["Cerberus Hemisphere "] }}" target="_blank"><img class="img img-responsive" id="mars_data-viz" src="{{ mars_data[" hemispheres "]["Cerberus Hemisphere "] }}" alt="Cerberus Hemisphere" style="max-width: 45%;">
+                        <a href="{{ mars_data[" hemispheres "]["Cerberus Hemisphere "] }}" target="_blank">
+                            <img class="img img-responsive" id="mars_data-viz" src="{{ mars_data[" hemispheres "]["Cerberus Hemisphere "] }}" alt="Cerberus Hemisphere" style="max-width: 45%">
                             <h3>Cerberus Hemisphere</h3>
                         </a>
                     </div>
                     <div class="col-md-6">
-                        <a href="{{ mars_data[" hemispheres "]["Schiaparelli Hemisphere "] }}" target="_blank"><img class="img img-responsive" id="mars_data-viz" src="{{ mars_data[" hemispheres "]["Schiaparelli Hemisphere "] }}" alt="" style="max-width: 45%;">
+                        <a href="{{ mars_data[" hemispheres "]["Schiaparelli Hemisphere "] }}" target="_blank">
+                            <img class="img img-responsive" id="mars_data-viz" src="{{ mars_data[" hemispheres "]["Schiaparelli Hemisphere "] }}" alt="Schiaparelli Hemisphere" style="max-width: 45%">
                             <h3>Schiaparelli Hemispher</h3>
                         </a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <a href="{{ mars_data[" hemispheres "]["Syrtis Major Hemisphere "] }}" target="_blank"><img class="img img-responsive" id="mars_data-viz" src="{{ mars_data[" hemispheres "]["Syrtis Major Hemisphere "] }}" alt="Syrtis Major Hemisphere" style="max-width: 45%;">
+                        <a href="{{ mars_data[" hemispheres "]["Syrtis Major Hemisphere "] }}" target="_blank">
+                            <img class="img img-responsive" id="mars_data-viz" src="{{ mars_data[" hemispheres "]["Syrtis Major Hemisphere "] }}" alt="Syrtis Major Hemisphere" style="max-width: 45%">
                             <h3>Syrtis Major Hemisphere</h3>
                         </a>
                     </div>
                     <div class="col-md-6">
-                        <a href="{{ mars_data[" hemispheres "]["Valles Marineris Hemisphere "] }}" target="_blank"><img class="img img-responsive" id="mars_data-viz" src="{{ mars_data[" hemispheres "]["Valles Marineris Hemisphere "] }}" alt="Valles Marineris Hemisphere" style="max-width: 45%;">
+                        <a href="{{ mars_data[" hemispheres "]["Valles Marineris Hemisphere "] }}" target="_blank">
+                            <img class="img img-responsive" id="mars_data-viz" src="{{ mars_data[" hemispheres "]["Valles Marineris Hemisphere "] }}" alt="Valles Marineris Hemisphere" style="max-width: 45%">
                             <h3>Valles Marineris Hemisphere</h3>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
 
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 
